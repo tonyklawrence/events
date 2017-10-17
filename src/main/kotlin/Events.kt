@@ -1,5 +1,6 @@
 import Event.*
 
+
 interface State<S, out A> {
     fun run(initial: S): Pair<S, A>
     fun <B> map(f: (A) -> B) = State<S, B> { s0 ->
